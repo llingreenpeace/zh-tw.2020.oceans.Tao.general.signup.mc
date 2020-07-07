@@ -36,12 +36,15 @@ var typing = () => {
 		timer = setTimeout(typing, freq);
 	}
 }
-AOS.init({
-	easing: 'ease-out-back',
-	duration: 1000,
-});
+
+
 
 $(document).ready(function() {
+
+	AOS.init({
+		easing: 'ease-out-back',
+		duration: 1000,
+	});
 
 	$('.typing__output').html('');
 
