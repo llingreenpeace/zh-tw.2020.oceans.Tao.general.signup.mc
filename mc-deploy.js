@@ -85,6 +85,7 @@ let formTmpl =
 		<input placeholder="Email" name="Email" type="email" value="">
 		<input placeholder="MobilePhone" name="MobilePhone" type="tel" value="">
 		<input placeholder="Birthdate" name="Birthdate" type="text" value="">
+		<input placeholder="MobileCountryCode" name="MobileCountryCode" type="text" value="886">
 		<input placeholder="OptIn" name="OptIn" type="checkbox" value="">
 
 		<input type="hidden" name="req" value="post_data">
