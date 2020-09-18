@@ -81,9 +81,17 @@ export const getPostURL = () => {
  * @return {object} {numSignup:int, numSignupTarget:int}
  */
 export const getNumSignupsAndTarget = () => {
-	var numSignupTarget = parseInt(document.querySelector('input[name="numSignupTarget"]').value, 10) || 0,
-		numResponses = parseInt(document.querySelector('input[name="numResponses"]').value, 10) || 0
-
+	var numSignupTarget = document.querySelector('input[name="numSignupTarget"]') ? parseInt(document.querySelector('input[name="numSignupTarget"]').value, 10) : 50000;
+	var numResponses = document.querySelector('input[name="numResponses"]') ? parseInt(document.querySelector('input[name="numResponses"]').value, 10) : 29612;
+	//console.log('numSignupTarget1:',numSignupTarget);
+	if (numResponses < 29612)
+		numResponses += 29612;
+	if (isNaN(numSignupTarget) || numSignupTarget < 50000)
+		numSignupTarget = 50000;
+		//console.log('numSignupTarget2:',numSignupTarget);
+    if (numResponses > numSignupTarget)
+		numSignupTarget = Math.ceil(numResponses / 10000) * 10000;
+		//console.log('numSignupTarget3:',numSignupTarget);
 	return {
 		numSignupTarget,
 		numSignup: numResponses

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const os = require('os');
-const FTPS = require('ftps');
+//const FTPS = require('ftps');
 
 /**
  * This file is a temporary script to replace gpea-npm-en-uploader
@@ -33,8 +33,8 @@ const FTPS = require('ftps');
 
 // definitions
 let buildFolder = path.join(__dirname, "build")
-	EndpointURL = "https://cloud.greenhk.greenpeace.org/up-dev-endpoint",
-	CampaignId = "7010k000000iJ7aAAE",
+	EndpointURL = "https://cloud.greentw.greenpeace.org/petition-pp",
+	CampaignId = "7012u000000OulaAAC",
 	DonationPageUrl = "https://www.greenpeace.org/eastasia/", // not used now
 	interests = ["Oceans"], // Arctic, Climate, Forest, Health, Oceans, Plastics
 	ftpConfigName = "ftp_tw", // refer to ~/.npm-en-uploader-secret
@@ -79,7 +79,7 @@ const upload_folder = function (settings, localDir) {
 
 // patch form contents
 let formTmpl =
-	`<form method="post" action="%%=v(@EndpointURL)=%%" class="" id="mc-form">
+	`<form method="post" action="%%=v(@EndpointURL)=%%" class="" id="mc-form" style="display:none;">
 		<input placeholder="FirstName" name="FirstName" type="text" value="">
 		<input placeholder="LastName" name="LastName" type="text" value="">
 		<input placeholder="Email" name="Email" type="email" value="">
@@ -178,9 +178,11 @@ fs.writeFileSync(indexHtmlFilePath, content)
 console.log('content patched')
 
 // upload the folder to FTP
+/*
 let raw = fs.readFileSync(path.join(os.homedir(), ".npm-en-uploader-secret"));
 let secrets = JSON.parse(raw);
 
 let ftpSetting = secrets[ftpConfigName]
 ftpSetting["remoteDir"] = ftpRemoteDir
 upload_folder(ftpSetting, buildFolder)
+*/

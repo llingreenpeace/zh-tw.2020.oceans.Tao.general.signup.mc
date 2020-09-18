@@ -1,9 +1,11 @@
 {
   "name": "gpea-en-54672-zhtw.2020.oceans.Tao",
-  "homepage": "https://act.greenpeace.org/page/54672/petition/1",
+  "homepage": "https://cloud.greentw.greenpeace.org/petition-oceans-tao",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {},
+  "dependencies": {
+    "mailcheck": "^1.1.1"
+  },
   "devDependencies": {
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
@@ -13,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:en": "PUBLIC_URL=https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc react-scripts build",
+    "build:en": "set PUBLIC_URL=https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc&&npm run build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy": "yarn run build:en && node mc-deploy.js"

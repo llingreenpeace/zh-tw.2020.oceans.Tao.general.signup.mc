@@ -49,7 +49,7 @@ $(document).ready(function() {
 		});
 		input_hide = true;
 
-		if (document.location.href.indexOf('petition/1') != -1)
+		if ($("#page-1").is(":visible"))
 			timer = setTimeout(typing, freq);
 		else {
 			$('.typing__output').html(input);
@@ -133,7 +133,7 @@ $(() => {
 				})
 				.then(response => response.json())
 				.then(response => {
-					console.log('response', response)
+					//console.log('response', response)
 
 					hideFullPageLoading()
 					changeToPage(2)
@@ -144,7 +144,7 @@ $(() => {
 				})
 				.catch(error => {
 					hideFullPageLoading()	// something wrong
-					alert(error)
+					//alert(error)
 					console.error(error)
 				})
 
@@ -158,17 +158,50 @@ $(() => {
 			// 'this' refers to the form
 			var errors = validator.numberOfInvalids();
 			if (errors) {
-				// console.log(errors)
-				var message = errors===1
-					? 'You missed 1 field. It has been highlighted'
-					: 'You missed ' + errors + ' fields. They have been highlighted';
-				$("div.error").show();
-			} else {
-				$("div.error").hide();
+				console.log(errors)
 			}
 		}
 	});
 
+	//email suggestion, email correctness
+	let domains = [
+		"me.com",
+		"outlook.com",
+		"netvigator.com",
+		"cloud.com",
+		"live.hk",
+		"msn.com",
+		"gmail.com",
+		"hotmail.com",
+		"ymail.com",
+		"yahoo.com",
+		"yahoo.com.tw",
+		"yahoo.com.hk"
+	];
+	let topLevelDomains = ["com", "net", "org"];
+
+	var Mailcheck = require('mailcheck');
+	
+	$("#email").on('blur', function() {
+		Mailcheck.run({
+			email: $("#email").val(),
+			domains: domains, // optional
+			topLevelDomains: topLevelDomains, // optional
+			suggested: (suggestion) => {
+				$('#emailSuggestion')[0].innerHTML = suggestion.full;
+				$('.email-suggestion').show();
+			},
+			empty: () => {
+				this.emailSuggestion = null
+			}
+		});		
+	});
+	$(".email-suggestion").click(function() {
+		$("#email").val($('#emailSuggestion')[0].innerHTML);
+		$('.email-suggestion').hide();
+	});
+
+	hideDdBtn();
 })
 
 // activate the share block
@@ -244,7 +277,7 @@ $(() => {
 
 // handle page changes
 const changeToPage = (pageNo) => {
-	console.log('changeToPage', pageNo)
+	//console.log('changeToPage', pageNo)
 	if (pageNo===1) {
 		$("#page-2").hide()
 	} else if (pageNo==2) {
@@ -255,13 +288,26 @@ const changeToPage = (pageNo) => {
 		if ($(window).width() <= 800) {
 			let enc = document.querySelector("#page-2")
 			let top = enc.getBoundingClientRect().top+window.pageYOffset
-			window.scrollTo(0, top);
+			//window.scrollTo(0, top);
 		}
 
 		document.querySelector(".floating-signup-div").remove()
 
 	} else {
 		throw new Error("Unknow pageNo: "+pageNo)
+	}
+}
+
+/**
+ * Hide the donatin btn in DD page
+ */
+const hideDdBtn = () => {
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+	if (urlParams.get('utm_source') === "dd") {
+		$('.is-hidden-at-dd-page-only').hide();
+
+		$('#en__field_supporter_phoneNumber').removeAttr("required"); //移除電話欄位 required Attr		
 	}
 }
 
