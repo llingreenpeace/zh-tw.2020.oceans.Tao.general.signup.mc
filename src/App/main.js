@@ -283,14 +283,14 @@ const changeToPage = (pageNo) => {
 	} else if (pageNo==2) {
 		$("#page-1").hide()
 		$("#page-2").show()
-
+		/*
 		// scroll to the succ element
 		if ($(window).width() <= 800) {
 			let enc = document.querySelector("#page-2")
 			let top = enc.getBoundingClientRect().top+window.pageYOffset
-			//window.scrollTo(0, top);
+			window.scrollTo(0, top);
 		}
-
+		*/
 		document.querySelector(".floating-signup-div").remove()
 
 	} else {

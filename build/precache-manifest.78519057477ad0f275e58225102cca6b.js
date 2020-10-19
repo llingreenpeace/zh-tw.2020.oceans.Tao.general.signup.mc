@@ -1,15 +1,15 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d70be19b0472a423c6fadb1559a10fcb",
+    "revision": "e939634390691910bb6d5c185f6ec697",
     "url": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/index.html"
   },
   {
-    "revision": "e197121a76b84c311b4f",
+    "revision": "fcca2830b76c8e5e8c15",
     "url": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/static/css/main.68ed16ee.chunk.css"
   },
   {
-    "revision": "e197121a76b84c311b4f",
-    "url": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/static/js/main.915e247f.chunk.js"
+    "revision": "fcca2830b76c8e5e8c15",
+    "url": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/static/js/main.de1626ef.chunk.js"
   },
   {
     "revision": "921fbf31a0bae069eb29",

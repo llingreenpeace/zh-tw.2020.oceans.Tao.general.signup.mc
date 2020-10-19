@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/static/css/main.68ed16ee.chunk.css",
-    "main.js": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/static/js/main.915e247f.chunk.js",
-    "main.js.map": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/static/js/main.915e247f.chunk.js.map",
+    "main.js": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/static/js/main.de1626ef.chunk.js",
+    "main.js.map": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/static/js/main.de1626ef.chunk.js.map",
     "runtime-main.js": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/static/js/runtime-main.4d9efbbb.js",
     "runtime-main.js.map": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/static/js/runtime-main.4d9efbbb.js.map",
     "index.html": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/index.html",
-    "precache-manifest.31530331ff6bd0092e7a772cf006ffd9.js": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/precache-manifest.31530331ff6bd0092e7a772cf006ffd9.js",
+    "precache-manifest.78519057477ad0f275e58225102cca6b.js": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/precache-manifest.78519057477ad0f275e58225102cca6b.js",
     "service-worker.js": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/service-worker.js",
     "static/css/main.68ed16ee.chunk.css.map": "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/static/css/main.68ed16ee.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.4d9efbbb.js",
     "static/css/main.68ed16ee.chunk.css",
-    "static/js/main.915e247f.chunk.js"
+    "static/js/main.de1626ef.chunk.js"
   ]
 }

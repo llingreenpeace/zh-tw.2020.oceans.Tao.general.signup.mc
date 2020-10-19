@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/precache-manifest.31530331ff6bd0092e7a772cf006ffd9.js"
+  "https://change.greenpeace.org.tw/2020/petition/zh-tw.2020.oceans.tao.mc/precache-manifest.78519057477ad0f275e58225102cca6b.js"
 );
 
 self.addEventListener('message', (event) => {
